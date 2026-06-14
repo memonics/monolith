@@ -52,6 +52,7 @@ graph TD
     style R0 fill:#1e293b,stroke:#334155,stroke-width:2px,color:#fff
     style R1 fill:#0f766e,stroke:#115e59,stroke-width:2px,color:#fff
     style R4 fill:#475569,stroke:#64748b,stroke-width:2px,color:#fff
+```
 
 ### The Inward-Flow Invariant
 * **Ring 0 (The Identity/Core Core):** Always the innermost, most foundational domain—e.g., Core Identity, Auth, or Tenant Management. No other business domain can function without it.
