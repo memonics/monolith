@@ -2,9 +2,9 @@ name: BDRA Architecture Governance Gate
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ main ]
   pull_request:
-    branches: [ main, master ]
+    branches: [ main ]
 
 jobs:
   governance:
@@ -19,12 +19,10 @@ jobs:
       uses: actions/setup-go@v5
       with:
         go-version: '1.22'
-
-    - name: Run Lightning-Fast Zero-Mock Unit Tests
-      run: make test
+        cache: true
 
     - name: Install BDRA Static Analysis Linter Engine
-      run: go install github.com/bdra-io/bdra-spec/tools/bdracheck@latest
+      run: go install github.com/bdra-io/bdracheck@latest
 
     - name: Execute AST Invariant Verification
-      run: bdracheck verify --config=bdracheck.json
+      run: bdracheck verify

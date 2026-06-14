@@ -1,11 +1,9 @@
 {
-  "$schema": "https://raw.githubusercontent.com/bdra-io/bdra-spec/main/schemas/v1/linter.json",
-  "projectName": "modular-monolith",
+  "projectName": "github.com/bdra-io/go-monolith-boilerplate",
   "architectureStrategy": "BDRA-Lite",
   "rules": {
     "disallowExternalImportsInPure": {
-      "targetDirs": ["internal/ring*/pure/**/*.go"],
-      "allowedPrefixes": ["modular-monolith/internal/ring*/pure"]
+      "targetDirs": ["internal/ring*/pure/**/*.go"]
     },
     "disallowIOInProtected": {
       "targetDirs": ["internal/ring*/protected/**/*.go"],
